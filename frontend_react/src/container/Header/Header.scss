@@ -21,12 +21,13 @@
     flex-direction: row;
 
     padding: 6rem 2rem 0;
+  
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 960px) {
         flex-direction: column;
     }
 
@@ -44,6 +45,7 @@
     align-items: flex-start;
     height: 100%;
 
+  /* Setting the width to 100% and the margin-right to 0rem when the screen is 2000px or less. */
     @media screen and (max-width: 2000px) {
         width: 100%;
         margin-right: 0rem;        
@@ -56,7 +58,8 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-
+    z-index: 2;
+    
     .badge-cmp, .tag-cmp {
         padding: 1rem 2rem;
         border: var(--white-color);
@@ -88,7 +91,7 @@
         }
     }
 
-        @media screen and (max-width: 1200px) { 
+        @media screen and (max-width: 960px) { 
             justify-content: flex-start;
             align-items: flex-start;
     }
@@ -102,6 +105,7 @@
     align-items: flex-start;
     height: 100%;
     margin-left: 1rem;
+    z-index: 1;
 
     div {
         width: 100px;
@@ -131,6 +135,7 @@
             height: 70px;
         }
 
+        /* Setting the width and height of the divs when the screen is 2000px or more. */
         @media screen and (min-width: 2000px){
             div:nth-child(1) {
                 width: 400px;
@@ -146,7 +151,10 @@
             }
         }
 
-        @media screen and (max-width: 1200px) {
+     
+      /* Setting the width to 100% and flex-direction to row. It is also setting the flex-wrap to wrap
+      and the margin-left to 0. It is also setting the margin to 1rem. */
+        @media screen and (max-width: 960) {
             width: 100%;
             flex-direction: row;
             flex-wrap: wrap;
@@ -163,23 +171,30 @@
             height: 100%;
 
             display: flex;
-            justify-content:flex-end;
+            justify-content: flex-end;
             align-items: flex-end;
             position: relative;
-
+            
             img {
                 width: 100%;
                 object-fit: contain;
                 z-index: 1;
+                position: relative;
+                bottom: 20%
+                
             }
 
             .overlay_circle {
                 position: absolute;
-                left: 0;
+                left: -1%;
                 right: 0;
-                bottom: 0;
+                bottom: 12%;
                 z-index: 0;
-            }
+        }
+
+        @media screen and (max-width: 960px) { 
+            bottom: -6%;
+    }
     }
        
 

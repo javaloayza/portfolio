@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "js_portafolio"
+    "name": "portfoliok"
   },
   "api": {
-    "projectId": "hpggymxb",
+    "projectId": "lntflhoq",
     "dataset": "production"
   },
   "plugins": [

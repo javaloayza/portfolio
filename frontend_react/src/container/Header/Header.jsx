@@ -2,9 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion';
 
 import { AppWrap } from '../../wrapper';
-import{ images} from '../../constants';
+import{ images } from '../../constants';
+
 import  './Header.scss';
 
+/* A constant that is being used to animate the circles. */
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -28,15 +30,16 @@ const Header = () => {
           <div className='badge-cmp app__flex'>
             <span>👋</span>
             <div style={{ marginLeft: 20}}>
-               <p className='p-text'>Hello, I am</p>
-               <h1 className='head-text'>Micael</h1>
+              <p className='p-text'>Hello, I am</p>
+              <h1 className='head-text'>Aldo</h1>
+              <p className='p-text'>Full Stack Developer</p>
             </div>
           </div>
 
-          <div className='tag-cmp app__flex'>
+       {/*    <div className='tag-cmp app__flex'>
             <p className='p-text'>Web Developer</p>
             <p className='p-text'> Full Stack</p>
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
@@ -45,7 +48,8 @@ const Header = () => {
         transition= {{ duration: 0.5, delayChildren: 0.5 }}
         className='app__header-img'
       >
-        <img src={images.profile} alt='profile_bg'/>
+        <img src={images.profile_} alt='profile_bg'/> 
+
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition= {{ duration: 1, ease: 'easeInOut' }}
@@ -61,7 +65,7 @@ const Header = () => {
           className='app__header-circles'
           /* Abajo se mapea cada imagen de forma destructurada, ingresan como parametro y se le asigna un index en automatico
           que tambien ingresa, finalmente se renderiza cada imagen con las clases de estilo correspondiente*/>
-          {[images.flutter, images.redux, images.sass].map((circle, index)=>(
+          {[images.react, images.node, images.typescript].map((circle, index)=>(
             <div className='circle-cmp app__flex' key={`circle-${index}`}>
               <img src={circle} alt='circle' /> 
             </div>
