@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
-        <img src={images.logo} alt="logo" />   
+        {/* <img src={images.logo} alt="logo" />    */}
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item)=> (
@@ -26,17 +26,17 @@ const Navbar = () => {
 
       <div className='app__navbar-menu'>
           <HiMenuAlt4 onClick={() => setToggle(true)}/>
-
+          
           {toggle && (
             <motion.div
-              whileInView={{ x: [300, 0]}}
+              whileInView={{ x: [200, 0]}}
               transition={{ duration: 0.85, ease: 'easeOut'}}
               >
-               <HiX onClick={() => setToggle(false)} />
-               <ul>
-               {['home', 'about', 'work', 'skills', 'contact'].map((item)=> (
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+              {['home', 'about', 'work', 'skills', 'contact'].map((item)=> (
                   <li key={item}>
-                    <a href={`#${item}`}>{item}</a>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                   </li>
             ))}   
               </ul>

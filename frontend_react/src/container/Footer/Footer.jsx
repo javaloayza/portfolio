@@ -4,6 +4,7 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+import SocialFooter from './SocialFooter';
 
 const Footer = () => {
 
@@ -54,11 +55,11 @@ and then creates a contact object. */
       <div className="app__footer-cards" /*Aqui se configuran las imagenes del correo y numero de telefono */ >
         <div className="app__footer-card ">
           <img src={images.email_} alt="email" />
-          <a href="mailto:hello@micael.com" className="p-text">hello@micael.com</a>
+          <a href="mailto:aldojavier.loayza@gmail.com" className="p-text">aldojavier.loayza@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+1 (123) 456-7890</a>
+          <a href="tel:(+51) 956157575" className="p-text"> (+51) 956157575</a>
         </div>
       </div>
       {!isFormSubmitted ? (
@@ -66,18 +67,19 @@ and then creates a contact object. */
         Los imputs nombre y email se configuran asingandole a cada uno el valor destructurado y se le da el evento handleChangeInput 
         de otra manera se envia el texto 'Thank you for getting in touch!' */>
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+            <input className="p-text" type="text" placeholder="Your Name..." name="username" value={username} onChange={handleChangeInput} />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input className="p-text" type="email" placeholder="Your Email..." name="email" value={email} onChange={handleChangeInput} />
           </div>
           <div>
             <textarea /*Aqui se establece el texarea, se le asigna el value desestructurado message y se le asigna handleChangeInput */
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Your Message..."
               value={message}
               name="message"
               onChange={handleChangeInput}
+              style={{ resize: 'none' }}
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit} /* Aqui se configura el boton que ejecuta con un click
@@ -91,6 +93,9 @@ and then creates a contact object. */
           </h3>
         </div>
       )}
+
+      <SocialFooter/>
+
     </>
   );
 };

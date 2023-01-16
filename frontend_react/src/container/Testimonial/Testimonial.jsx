@@ -41,7 +41,6 @@ const Testimonial = () => {
           <div className="app__testimonial-item app__flex">
             
             <img src={urlFor(testimonials[currentIndex].imgurl)} alt={testimonials[currentIndex].name}    /* Using the `urlFor` function to generate a URL for the image. *//>
-              {console.log(testimonials[currentIndex])}
               <div className="app__testimonial-content">
                 <p className="p-text">{testimonials[currentIndex].feedback}</p>
                 <div>

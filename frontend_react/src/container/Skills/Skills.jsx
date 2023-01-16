@@ -16,7 +16,7 @@ const [skills, setSkills] = useState([]);
 
   /* A hook that is used for data fetching, component state, and for executing side effects. */
   useEffect(() => { 
-    const query = '*[_type == "experiences"]';
+    const query = '*[_type == "experiences"] | order(_createdAt asc)';
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query)
