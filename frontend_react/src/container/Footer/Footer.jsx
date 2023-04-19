@@ -55,7 +55,7 @@ and then creates a contact object. */
       <div className="app__footer-cards" /*Aqui se configuran las imagenes del correo y numero de telefono */ >
         <div className="app__footer-card ">
           <img src={images.email_} alt="email" />
-          <a href="mailto:aldojavier.loayza@gmail.com" className="p-text">aldojavier.loayza@gmail.com</a>
+          <a href="mailto:jloayzag7@gmail.com" className="p-text">jloayzag7@gmail.com</a>
         </div>
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
