@@ -33,6 +33,15 @@ const [skills, setSkills] = useState([]);
 
  } ,[])
 
+
+  // Ordenar las experiencias por fecha de inicio de forma descendente
+  const sortedExperiences = experience.sort((a, b) => {
+    const dateA = new Date(a.years.startDate);
+    const dateB = new Date(b.years.startDate);
+    return dateB - dateA;
+  });
+
+
   return (
     <>
     <h2 className="head-text">Skills & Experiences</h2>
@@ -57,16 +66,16 @@ const [skills, setSkills] = useState([]);
         ))}
       </motion.div>
       <div className="app__skills-exp">
-        {experience.map((experience) => (
+        {sortedExperiences.map((experience, index) => (
           <motion.div
             className="app__skills-exp-item"
-            key={experience.year}
+            key={index}
           >
             <div className="app__skills-exp-year">
-              <p className="bold-text">{experience.year}</p>
+              <p className="bold-text" >{sortedExperiences.years}</p>
             </div>
             <motion.div className="app__skills-exp-works">
-              {experience.works.map((work) => (
+              {experience.works.map((work, index) => (
                 <>
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
