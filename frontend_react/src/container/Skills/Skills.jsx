@@ -36,11 +36,22 @@ const [skills, setSkills] = useState([]);
 
   // Ordenar las experiencias por fecha de inicio de forma descendente
   const sortedExperiences = experience.sort((a, b) => {
-    const dateA = new Date(a.years.startDate);
-    const dateB = new Date(b.years.startDate);
+    const dateA = a.years && a.years.length > 0 ? new Date(a.years[0].startDate) : null;
+    const dateB = b.years && b.years.length > 0 ? new Date(b.years[0].startDate) : null;
     return dateB - dateA;
   });
 
+
+  const formatDate = (date) => {
+    if (date) {
+      return new Date(date).toLocaleDateString('es-ES', {
+        /* day: '2-digit', */
+        month: '2-digit',
+        year: 'numeric'
+      }).replace(/\//g, '/');
+    }
+    return '';
+  };
 
   return (
     <>
@@ -72,7 +83,9 @@ const [skills, setSkills] = useState([]);
             key={index}
           >
             <div className="app__skills-exp-year">
-              <p className="bold-text" >{sortedExperiences.years}</p>
+              <p className="bold-text" >
+                
+                {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)}  hasta ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate): " la actualidad" )}` }</p>
             </div>
             <motion.div className="app__skills-exp-works">
               {experience.works.map((work, index) => (
