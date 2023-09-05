@@ -5,7 +5,7 @@
   }
   
   .app__whitebg {
-    background-color: var(--white-color);
+    background-color: var(--bgWhite-color);
   }
   
   .app__primarybg {
@@ -61,7 +61,10 @@
     text-transform: capitalize;
   
     span {
-      color: var(--secondary-color);
+      background: var(--text-gradient-red-yelow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
     }
   
     @media screen and (min-width: 2000px) {
@@ -188,3 +191,24 @@
       padding: 2rem;
     }
   }
+
+  .sun {
+    width: 1.8rem;
+    border-radius: 50%;
+    
+    hover {
+      background: #233F52
+    }
+
+  }
+  
+  .moon {
+    width: 1.5rem;
+    border-radius: 50%;
+
+    hover {
+      background: #D0E0EB
+    }
+
+  }
+  

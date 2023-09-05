@@ -100,6 +100,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin: 1rem 0;
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+    }
   }
   
   .app__skills-exp-works {
@@ -126,8 +130,9 @@
   }
   
   .app__skills-exp-year {
-    margin-right: 3rem;
-  
+    margin-right: 2rem;
+    min-width: 9rem;
+
     p {
       font-weight: 800;
       color: var(--secondary-color);
@@ -135,6 +140,7 @@
   
     @media screen and (max-width: 450px) {
       margin-right: 1rem;
+      min-width: auto;
     }
   }
   

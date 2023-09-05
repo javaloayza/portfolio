@@ -4,14 +4,27 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
+  /* light-theme */
   --primary-color: #edf2f8;
   --secondary-color: #f29c06;
+  --bgWhite-color: #FCFCFC;
   --secondary-color-two: #313bac;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --text-gradient-red-yelow: linear-gradient(90deg,#ff7170,#ffe57f);
+  --urlHeader: url('./assets/bgIMG.png');
+
+  /* dark-theme */
+  --primaryDark-color: #0A0F16;
+  --secondaryDark-color: #808CFB;
+  --bgDark-color: #0D1117;
+  --text-gradient-dark-theme: linear-gradient(90deg, #4ca5ff,#b573f8);
+  --urlHeader-dark: transparent;
+
+  
 }
 
 /* A global reset. */
@@ -20,4 +33,21 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+.dark-theme {
+  --primary-color: var(--primaryDark-color);
+  --secondary-color: var(--secondaryDark-color);
+  --bgWhite-color: var(--bgDark-color);
+  --black-color: var(--white-color);
+  --text-gradient-red-yelow: var(--text-gradient-dark-theme);
+
+  --urlHeader: var(--urlHeader-dark);
+}
+
+.text-gradient-red-yelow {
+  background: var(--text-gradient-red-yelow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important; 
 }
