@@ -5,10 +5,13 @@ import { images } from '../../constants';
 
 
 import './Navbar.scss';
+import SunMoon from '../SunMoon';
 
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false); 
+  // const { theme, toggleTheme, themeName } = useTheme();
+
 
   return (
     <nav className='app__navbar'>
@@ -24,6 +27,8 @@ const Navbar = () => {
          ))}
       </ul>
 
+      
+      <SunMoon/>
       <div className='app__navbar-menu'>
           <HiMenuAlt4 onClick={() => setToggle(true)}/>
           
@@ -44,7 +49,7 @@ const Navbar = () => {
           )}
 
       </div>      
-
+               
     </nav>
   )
 }

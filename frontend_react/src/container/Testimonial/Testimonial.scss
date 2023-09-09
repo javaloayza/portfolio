@@ -7,7 +7,7 @@
   .app__testimonial-item {
     width: 60%;
     min-height: 320px;
-    background-color: var(--white-color);
+    background-color: var(--bgWhite-color);
     display: flex;
     flex-direction: row;
     padding: 2rem;
@@ -90,7 +90,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: var(--white-color);
+      background-color: var(--bgWhite-color);
   
       margin: 1rem;
       transition: all 0.3s ease-in-out;

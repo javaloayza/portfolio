@@ -85,7 +85,7 @@ const [skills, setSkills] = useState([]);
             <div className="app__skills-exp-year">
               <p className="bold-text" >
                 
-                {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)}  hasta ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate): " la actualidad" )}` }</p>
+                {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)}  - ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate): " Present" )}` }</p>
             </div>
             <motion.div className="app__skills-exp-works">
               {experience.works.map((work, index) => (
