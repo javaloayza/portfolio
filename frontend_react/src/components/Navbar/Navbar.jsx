@@ -27,8 +27,8 @@ const Navbar = () => {
          ))}
       </ul>
 
+      
       <SunMoon/>
-
       <div className='app__navbar-menu'>
           <HiMenuAlt4 onClick={() => setToggle(true)}/>
           
@@ -49,7 +49,7 @@ const Navbar = () => {
           )}
 
       </div>      
-
+               
     </nav>
   )
 }

@@ -57,7 +57,7 @@
          }
 
          a {
-            color: var(--gray-color);
+            color: var(--gray-toWhite);
             text-decoration: none;
             flex-direction: column;
 
@@ -120,8 +120,8 @@
         align-items: flex-end;
         flex-direction: column;
 
-        background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        // background: url('../../assets/bgWhite.png');
+        background-color: var(--bgWhite-color);
         background-size: cover;
         background-repeat: repeat;
 

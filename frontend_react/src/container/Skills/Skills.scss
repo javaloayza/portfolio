@@ -24,7 +24,7 @@
     justify-content: flex-start;
     align-items: flex-start;
   
-    margin-right: 5rem;
+    margin-right: 3rem;
   
     @media screen and (max-width: 900px) {
       margin-right: 0;
@@ -45,7 +45,7 @@
       width: 90px;
       height: 90px;
       border-radius: 50%;
-      background-color: #fff;
+      background-color: var(--primary-color) !important;
   
       img {
         width: 50%;
@@ -146,7 +146,7 @@
   
   .skills-tooltip {
     max-width: 300px !important;
-    background-color: var(--white-color) !important;
+    background-color: var(--primary-color) !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
     border-radius: 5px !important;
     padding: 1rem !important;

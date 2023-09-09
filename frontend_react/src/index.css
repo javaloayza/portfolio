@@ -12,19 +12,23 @@
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
+  --gray-toWhite: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
-  --text-gradient-red-yelow: linear-gradient(90deg,#ff7170,#ffe57f);
+  --text-gradient-red-yelow: linear-gradient(90deg,#ff7170,#f29c06);
   --urlHeader: url('./assets/bgIMG.png');
+  --card-bgColor: linear-gradient(43deg, rgba(233,237,242,1) 25%, rgba(255,255,255,1) 53%, rgba(215,222,231,1) 80%);
+  --shadow-card: 0 0 25px rgba(0,0,0,0.1);
 
   /* dark-theme */
-  --primaryDark-color: #0A0F16;
-  --secondaryDark-color: #808CFB;
-  --bgDark-color: #0D1117;
-  --text-gradient-dark-theme: linear-gradient(90deg, #4ca5ff,#b573f8);
+  --primaryDark-color: #1A1D1F;
+  --secondaryDark-color: #0560FD;
+  --bgDark-color: #25282D;
+  --text-gradient-dark-theme: linear-gradient(90deg, #0560FD,#b573f8);
   --urlHeader-dark: transparent;
-
-  
+  --cardDark-bgColor: #1A1D1F
+  --shadowDark-card: none; 
+  --lightGrayDark-color: #6b7688;
 }
 
 /* A global reset. */
@@ -41,8 +45,12 @@
   --bgWhite-color: var(--bgDark-color);
   --black-color: var(--white-color);
   --text-gradient-red-yelow: var(--text-gradient-dark-theme);
-
+  --card-bgColor: var(--cardDark-bgColor);
   --urlHeader: var(--urlHeader-dark);
+  --shadow-card: var(--shadowDark-card);
+  --lightGray-color: var(--lightGrayDark-color);
+  --gray-toWhite: var(--white-color)
+
 }
 
 .text-gradient-red-yelow {
