@@ -149,6 +149,12 @@
             }   
         }
 
+            @media (max-width: 768px) {
+                .app__work-hover {
+                animation: autoHover 5s infinite;
+                }
+            }
+
         .app__work-content {
             padding: 0.5rem;
             width: 100%;

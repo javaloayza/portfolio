@@ -59,3 +59,42 @@
   background-clip: text;
   color: transparent !important; 
 }
+
+/* Animación para el primer círculo */
+@keyframes growShrink1 {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Animación para el segundo círculo */
+@keyframes growShrink2 {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Animación para el tercer círculo */
+@keyframes growShrink3 {
+  0% { transform: scale(1); }
+  70% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+@keyframes waveAnimation {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  60% { transform: rotate(15deg); }
+}
+
+@keyframes autoHover {
+  0%, 20% {
+    opacity: 0;
+  }
+  30%, 60% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 0;
+  }
+}
