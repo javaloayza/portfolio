@@ -149,11 +149,30 @@
             }   
         }
 
-            @media (max-width: 768px) {
-                .app__work-hover {
-                animation: autoHover 5s infinite;
-                }
+
+        /* Esto supone que 'hover-effect' es una clase que aplica el efecto de hover */
+        @media (min-width: 1024px) { /* Ajusta este valor según tu breakpoint */
+            .app__work-item:not(.active-card-class) .hover-effect {
+            /* Anula el efecto de hover en pantallas grandes */
+            pointer-events: none;
+            opacity: 0 !important; /* Sólo si es necesario */
             }
+        }
+
+                /* Asegúrate de que en pantallas pequeñas la tarjeta activa tenga el estilo deseado */
+        @media (max-width: 768px) {
+            .active-card-class .app__work-hover {
+            opacity: 1;
+            /* otros estilos deseados... */
+            }
+        }
+        
+     //Estilo focus temporal
+            // @media (max-width: 768px) {
+            //     .app__work-hover {
+            //     animation: autoHover 5s infinite;
+            //     }
+            // }
 
         .app__work-content {
             padding: 0.5rem;

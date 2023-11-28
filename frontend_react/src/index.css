@@ -86,7 +86,7 @@
   25% { transform: rotate(5deg); }
   60% { transform: rotate(15deg); }
 }
-
+/* 
 @keyframes autoHover {
   0%, 20% {
     opacity: 0;
@@ -97,4 +97,4 @@
   70%, 100% {
     opacity: 0;
   }
-}
+} */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import {motion} from 'framer-motion';
 
@@ -14,7 +14,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1})
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-
+  
 /* Este es un enlace que se utiliza para obtener datos de la API de Sanity. */
   useEffect(() => { 
      const query = '*[_type == "works"]';
@@ -52,6 +52,35 @@ const Work = () => {
     }, 500);
   }
 
+  //Focus effect
+  const [activeCard, setActiveCard] = useState(null); 
+  const cardRef = useRef(null);
+  
+  const isLargeScreen = window.matchMedia("(min-width: 1024px)").matches;
+
+  const handleCardClick = (index) => {
+    if (!isLargeScreen) {
+      if (activeCard === index) {
+        setActiveCard(null);  // si la tarjeta ya está activa, desactivarla
+      } else {
+        setActiveCard(index);  // activar la tarjeta seleccionada
+      }
+    }
+  };
+  
+  useEffect(() => {
+      const handleOutsideClick = (event) => {
+          if (cardRef.current && !cardRef.current.contains(event.target)) {
+              setActiveCard(null); // Desactiva la tarjeta si se hace clic fuera
+          }
+      }
+      document.addEventListener('mousedown', handleOutsideClick);
+  
+      return () => {
+          document.removeEventListener('mousedown', handleOutsideClick);
+      }
+  }, []);
+
   return (
     /* Aqui se configura la los motion div que van a contener las imagenes de los works,
     asi como los botones internos de vision y github a los cuales se accede de react-icons,
@@ -80,16 +109,22 @@ const Work = () => {
             className='app__work-portfolio'
            >
             {filterWork.map((work, index) => (
-              <div className='app__work-item app__flex' key={index}>
+              <div       
+              className={`app__work-item app__flex ${activeCard === index ? 'active-card-class' : ''}`} 
+              key={index} 
+              ref={index === activeCard ? cardRef : null} 
+              onClick={() => handleCardClick(index)}>
                 <div className='app__work-img app__flex'>
                 
                   <img src={urlFor(work.imgUrl)} alt={work.name} /*este urlFor jala mediante una Url la imagen 
                   y work.name jala el name de Sanity *//>
                   <motion.div className='app__work-before-hov app__flex' />
                   <motion.div
+                    style={activeCard === index ? {opacity: 1} : {}}
                     whileHover={{opacity: [0, 1]}}
                     transition={{ duration: 0.25, ease: 'easeInOut',  delayChildren: 0.5 }}
-                    className='app__work-hover app__flex ' 
+                    className='app__work-hover app__flex '
+                    tabindex="0" 
                     >
                     <a href={work.projectLink} target='_blank' rel='noreferrer' >
                         <motion.div
