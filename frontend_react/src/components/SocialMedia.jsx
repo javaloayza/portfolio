@@ -11,7 +11,7 @@ const SocialMedia = () => {
         <a href="https://www.linkedin.com/in/aldoloayza" target="_blank" rel="noreferrer" >
             <FaLinkedin />
         </a>
-        <a href="https://github.com/Javadev7" target="_blank" rel="noreferrer">
+        <a href="https://github.com/javaloayza" target="_blank" rel="noreferrer">
             <FaGithub />
         </a>
         <a href="https://www.instagram.com/javierloayz" target="_blank" rel="noreferrer">
