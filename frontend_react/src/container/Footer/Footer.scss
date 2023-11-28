@@ -115,11 +115,12 @@
       margin: 2rem 0 0 0;
       font-family: var(--font-base);
   
-      transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      // transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      transition: all 0.3s ease;
       cursor: pointer;
   
       &:hover {
-        box-shadow: 0 0 25px var(--primary-color);;
+        box-shadow: 0 0 25px #b4b4b4;
       }
     }
   
