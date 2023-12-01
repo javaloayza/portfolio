@@ -31,10 +31,9 @@ const Navbar = () => {
       <SunMoon/>
       <div className='app__navbar-menu'>
           <HiMenuAlt4 onClick={() => setToggle(true)}/>
-          
           {toggle && (
             <motion.div
-              whileInView={{ x: [200, 0]}}
+            whileInView={{ x: [170, 0]}}
               transition={{ duration: 0.85, ease: 'easeOut'}}
               >
               <HiX onClick={() => setToggle(false)} />

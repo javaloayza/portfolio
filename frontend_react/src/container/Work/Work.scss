@@ -48,7 +48,7 @@
 
             .app__work-item {
                 width: 335px;
-                min-height: 450px;
+                min-height: 507px;
                 flex-direction: column;
                 justify-content: flex-start;
 
@@ -76,7 +76,11 @@
 
                 @media screen and (max-width: 300px) {
                     width: 100%;
-                    margin: 1rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    margin-inline: 0;
+                    min-height: 480px;
+
                 }
             }
         }
@@ -179,7 +183,7 @@
         .app__work-content {
             padding: 0.5rem;
             width: 100%;
-            max-height: 200px;;
+            // max-height: 200px;
             position: relative;
             flex-direction: column;
 
