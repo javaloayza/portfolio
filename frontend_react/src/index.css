@@ -15,7 +15,7 @@
   --gray-toWhite: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
-  --text-gradient-red-yelow: linear-gradient(90deg,#ff7170,#f29c06);
+  --text-gradient-red-yelow: linear-gradient(90deg,#f29c06, #ff7170);
   --urlHeader: url('./assets/bgIMG.png');
   --card-bgColor: linear-gradient(43deg, rgba(233,237,242,1) 25%, rgba(255,255,255,1) 53%, rgba(215,222,231,1) 80%);
   --shadow-card: 0 0 25px rgba(0,0,0,0.1);

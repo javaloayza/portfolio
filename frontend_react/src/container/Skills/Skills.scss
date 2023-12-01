@@ -5,7 +5,7 @@
   }
   
   .app__skills-container {
-    width: 80%;
+    width: 85%;
     margin-top: 3rem;
   
     display: flex;
@@ -154,6 +154,7 @@
     color: var(--gray-color) !important;
     text-align: center !important;
     line-height: 1.5 !important;
+    font-size: 0.85rem !important;
     opacity: 1 !important;
   
     @media screen and (min-width: 2000px) {
@@ -161,4 +162,10 @@
       max-width: 500px !important;
       line-height: 2 !important;
     }
+
+    @media screen and (max-width: 450px) {
+      max-width: 250px !important;
+      left: 14px  !important;
+
+  }
   }

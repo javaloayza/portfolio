@@ -124,7 +124,7 @@ const Work = () => {
                     whileHover={{opacity: [0, 1]}}
                     transition={{ duration: 0.25, ease: 'easeInOut',  delayChildren: 0.5 }}
                     className='app__work-hover app__flex '
-                    tabindex="0" 
+                    tabIndex="0" 
                     >
                     <a href={work.projectLink} target='_blank' rel='noreferrer' >
                         <motion.div

@@ -17,7 +17,7 @@
     margin: 4em 2rem 2rem;
   
     .app__footer-card {
-      min-width: 290px;
+      min-width: 260px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -49,7 +49,8 @@
       }
   
       @media screen and (max-width: 450px) {
-        width: 100%;
+        min-width: 100%;
+
       }
     }
   

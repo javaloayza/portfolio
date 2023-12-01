@@ -72,7 +72,7 @@ const [skills, setSkills] = useState([]);
             >
               <img src={urlFor(skill.icon)} alt={skill.name} />
             </div>
-            <p className="p-text">{skill.name}</p>
+            <p className="p-text2">{skill.name}</p>
           </motion.div>
         ))}
       </motion.div>
