@@ -152,7 +152,7 @@ const Skills = () => {
         >
           <button className="close-button" onClick={closeModal}>×</button>
           <h2>{selectedWork.name}</h2>
-          <p>{selectedWork.company}</p>
+          <p>{selectedWork.company}</p> <br/>
           <p>{selectedWork.desc}</p>
         </Modal>
       )}
