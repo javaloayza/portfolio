@@ -94,49 +94,68 @@ const Skills = () => {
               className="app__skills-exp-item"
               key={index}
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">
-                  {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)}  - ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate) : " Present")}`}
-                </p>
-              </div>
-              <motion.div className="app__skills-exp-works">
-                {experience.works.map((work, index) => (
-                  <React.Fragment key={work.name}>
-                    {isMobile ? (
+              {isMobile ? (
+                <>
+                  <div className="app__skills-exp-year" onClick={() => handleWorkClick(experience.works[0])}>
+                    <p className="bold-text">
+                      {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)} - ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate) : "Present")}`}
+                    </p>
+                  </div>
+                  <motion.div className="app__skills-exp-works">
+                    {experience.works.map((work) => (
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
                         className="app__skills-exp-work"
                         onClick={() => handleWorkClick(work)}
+                        key={work.name}
                       >
                         <h4 className="bold-text">{work.name}</h4>
                         <p className="p-text">{work.company}</p>
                       </motion.div>
-                    ) : (
+                    ))}
+                  </motion.div>
+                </>
+              ) : (
+                <div
+                  className="app__skills-exp-tooltip-wrapper"
+                  data-tip
+                  data-for={`experience-${index}`}
+                >
+                  <div className="app__skills-exp-year">
+                    <p className="bold-text">
+                      {experience.years?.length > 0 && `${formatDate(experience.years[0].startDate)} - ${(experience.years[0].endDate ? formatDate(experience.years[0].endDate) : "Present")}`}
+                    </p>
+                  </div>
+                  <motion.div className="app__skills-exp-works">
+                    {experience.works.map((work) => (
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
                         className="app__skills-exp-work"
-                        data-tip
-                        data-for={work.name}
+                        key={work.name}
                       >
                         <h4 className="bold-text">{work.name}</h4>
                         <p className="p-text">{work.company}</p>
                       </motion.div>
-                    )}
-                    {!isMobile && (
-                      <ReactTooltip
-                        id={work.name}
-                        effect="solid"
-                        arrowColor="var(--primary-color)"
-                        className="skills-tooltip"
-                      >
-                        {work.desc}
-                      </ReactTooltip>
-                    )}
-                  </React.Fragment>
-                ))}
-              </motion.div>
+                    ))}
+                  </motion.div>
+                  <ReactTooltip
+                    id={`experience-${index}`}
+                    effect="solid"
+                    arrowColor="var(--primary-color)"
+                    className="skills-tooltip"
+                  >
+                    {experience.works.map((work) => (
+                      <div key={work.name}>
+                        <h4 className="bold-text">{work.name}</h4>
+                        <p className="p-text">{work.company}</p> <br/>
+                        <p className='p-text' >{work.desc}</p>
+                      </div>
+                    ))}
+                  </ReactTooltip>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -151,7 +170,7 @@ const Skills = () => {
           overlayClassName="overlay"
         >
           <button className="close-button" onClick={closeModal}>×</button>
-          <h2>{selectedWork.name}</h2>
+          <h2 className="bold-text">{selectedWork.name}</h2>
           <p>{selectedWork.company}</p> <br/>
           <p>{selectedWork.desc}</p>
         </Modal>
@@ -162,6 +181,6 @@ const Skills = () => {
 
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
-     'skills',
-     "app__whitebg"
-     );
+    'skills',
+    "app__whitebg"
+    );
