@@ -97,6 +97,17 @@
       font-size: 1.75rem;
     }
   }
+
+    .p-textTag {
+    font-size: 0.9rem;
+    text-align: left;
+    color: var(--black-color);
+    line-height: 1.5;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem;
+    }
+  }
   
   .bold-text {
     font-size: 1rem;
@@ -109,7 +120,7 @@
     }
   
     @media screen and (max-width: 450px) {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
   

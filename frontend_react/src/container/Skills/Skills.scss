@@ -184,6 +184,13 @@
     border-radius: 8px;
     outline: none;
   }
+
+  .modal-text {
+    font-weight: 800;
+    color: var(--black-color);
+    text-align: left;
+    font-size: 1rem;
+  }
   
   .overlay {
     position: fixed;

@@ -14,7 +14,7 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedWork, setSelectedWork] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
     const query = '*[_type == "experiences"] | order(_createdAt asc)';
@@ -31,7 +31,7 @@ const Skills = () => {
       });
 
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     window.addEventListener('resize', handleResize);
@@ -170,7 +170,7 @@ const Skills = () => {
           overlayClassName="overlay"
         >
           <button className="close-button" onClick={closeModal}>×</button>
-          <h2 className="bold-text">{selectedWork.name}</h2>
+          <h2 className="modal-text">{selectedWork.name}</h2>
           <p>{selectedWork.company}</p> <br/>
           <p>{selectedWork.desc}</p>
         </Modal>
