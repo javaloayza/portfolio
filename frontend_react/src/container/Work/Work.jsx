@@ -152,7 +152,7 @@ const Work = () => {
                 </div>
                 
                 <div className='app__work-content app__flex' >
-                  <h4 className='bold-text' style={{ display: 'flex', justifyContent: 'center'   }}/* Se obtiene el titulo de Sanity*/>{work.title}</h4 >
+                  <h4 className='bold-text' style={{ display: 'flex', justifyContent: 'center', fontSize:'16px'  }}/* Se obtiene el titulo de Sanity*/>{work.title}</h4 >
                   <p className='p-text' style={{ marginTop: 10 }}/*Se obtiene la descripcion de Sanity*/>{work.description}</p>
                 
                     <div className='app__work-tag app__flex'>
