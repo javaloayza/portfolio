@@ -124,15 +124,15 @@
     }
   }
   
-  .app__skills-exp-works {
+  .app__skills-experiences {
     flex: 1;
-  
-    .app__skills-exp-work {
+
+    .app__skills-exp-experiences {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       cursor: pointer;
   
       h4 {
@@ -252,4 +252,50 @@
   .paragraph-spacing {
     display: block; /* Fuerza el salto de línea */
     margin-bottom: 1em;
+  }
+
+  .button_details {
+    display: flex;
+    gap: 8px;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--secondary-color);
+
+    font-weight: 500;
+    color: var(--white-color);
+    outline: none;
+    margin: 8px 0 0 0;
+    font-family: var(--font-base);
+
+      // transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      transition: all 0.3s ease;
+      cursor: pointer;
+  
+      &:hover {
+        box-shadow: 0 0 10px #b4b4b4;
+      }
+    }
+
+    .open_style {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+  
+      svg {
+          width: 100%;
+          height: 100%;
+          // fill: var(--gray-toWhite);
+          stroke: var(--white-color);
+          
+          path {
+              fill: inherit;
+              stroke: inherit;
+          }
+  
+          // &:hover path {
+          //     fill: var(--secondary-color);
+          //     stroke: var(--secondary-color);
+          // }
+      }
   }
