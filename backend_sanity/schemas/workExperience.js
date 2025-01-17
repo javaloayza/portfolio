@@ -4,7 +4,7 @@ export default {
     type:'document',
     fields:[
            {   name:'name',
-               title:'name',
+               title:'Name',
                type:'string'
             },
             {
@@ -14,8 +14,9 @@ export default {
             },
             {
                 name:'desc',
-                title:'Desc',
-                type:'string'
+                title:'Description',
+                type: 'array',
+                of: [{ type: 'string' }]
             }
     ]
 }
