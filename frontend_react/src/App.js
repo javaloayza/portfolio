@@ -1,18 +1,20 @@
 import React from 'react';
 
-import {About, Footer, Header, Skills, Testimonial, Work} from './container';
+import {About, Footer, Header, Skills, Work} from './container';
 import {Navbar} from './components';
 import './App.scss';
+import Experience from './container/Experience/Experience';
 
 const App = () => {
   return (
     <div className ="app">
       <Navbar />
-      <Header />
-      <About />
-      <Work />  
-      <Skills />
-      <Testimonial />
+        <Header />
+        <Skills />
+        <Work /> 
+        <Experience /> 
+        <About />
+        {/* <Testimonial />  */}
       <Footer />
     </div>
   )

@@ -65,7 +65,7 @@ const Header = () => {
           className='app__header-circles'
           /* Abajo se mapea cada imagen de forma destructurada, ingresan como parametro y se le asigna un index en automatico
           que tambien ingresa, finalmente se renderiza cada imagen con las clases de estilo correspondiente*/>
-          {[images.react, images.node, images.typescript].map((circle, index)=>(
+          {[images.react, images.angular, images.node].map((circle, index)=>(
             <div className='circle-cmp app__flex' key={`circle-${index}`}>
               <img src={circle} alt='circle' /> 
             </div>
